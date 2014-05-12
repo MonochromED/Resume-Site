@@ -104,6 +104,10 @@ nav {
   width: 100px;
   height: 100px; }
 
+.medium_picture {
+  width: 150px;
+  height: 150px; }
+
 .tilt_10degree_cc {
   transform-origin: 50% 50%;
   transform: rotate(-10deg);
@@ -114,7 +118,7 @@ nav {
 
 .picture_container {
   display: inline-block;
-  padding: 10px; }
+  padding: 20px; }
 
 .float_image_container_left {
   float: left; }
@@ -166,4 +170,10 @@ nav .button:hover {
 
 .spacer {
   height: 200px;
-  width: 100%; }
+  width: 100%;
+  background-color: red; }
+
+.container_clear_float_elements {
+  height: 0px;
+  width: 100%;
+  clear: both; }
