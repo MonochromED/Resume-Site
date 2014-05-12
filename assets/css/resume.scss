@@ -206,6 +206,7 @@ nav{
     flex: auto;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-start;
 
     section{
     $total_section_width: 440px;
@@ -217,10 +218,19 @@ nav{
     margin-right: 5px;
     padding: $section_padding_width;
     }
+
+    .no_flex{
+      flex: none; 
+    }
+
+    .projects_div{
+      width: 700px;
+    }
   }
-
-
 }
+
+
+//Flexbox preset sizes
 
 
 

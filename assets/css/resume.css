@@ -149,13 +149,18 @@ nav {
     display: flex;
     flex: auto;
     flex-flow: row wrap;
-    justify-content: center; }
+    justify-content: center;
+    align-items: flex-start; }
     .main_content section {
       flex-basis: 420px;
       margin-top: 50px;
       margin-left: 5px;
       margin-right: 5px;
-      padding: 10px; } }
+      padding: 10px; }
+    .main_content .no_flex {
+      flex: none; }
+    .main_content .projects_div {
+      width: 700px; } }
 /*-------------------CSS Animations----------------------*/
 .to_top_button {
   transition: opacity 200ms ease-in-out; }
