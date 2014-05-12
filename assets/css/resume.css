@@ -54,7 +54,8 @@ nav {
   right: 10px;
   bottom: 10px;
   opacity: 0.1;
-  border-radius: 5px; }
+  border-radius: 5px;
+  z-index: 1; }
 
 .to_top_button:hover {
   opacity: 0.9; }

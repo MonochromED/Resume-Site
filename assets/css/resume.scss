@@ -81,6 +81,7 @@ nav{
   bottom: 10px;//Places button on screen for non JS users.
   opacity: 0.1;
   border-radius: 5px;
+  z-index: 1;
 }
 
 .to_top_button:hover{
