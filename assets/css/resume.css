@@ -140,9 +140,9 @@ nav {
     font-size: 1.5em; }
   nav .button_container {
     width: 100%; } }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .main_content {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
