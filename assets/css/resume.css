@@ -170,8 +170,7 @@ nav .button:hover {
 
 .spacer {
   height: 200px;
-  width: 100%;
-  background-color: red; }
+  width: 100%; }
 
 .container_clear_float_elements {
   height: 0px;
