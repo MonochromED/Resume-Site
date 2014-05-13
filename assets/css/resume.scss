@@ -55,9 +55,10 @@ nav{
     display: inline-block;
     position: relative;
     text-align: center;
-  }
-  .button:hover{
-    background-color: lighten(tan, 10);
+
+    &:hover{
+      background-color: lighten(tan, 10);
+    }
   }
 
   .button_container{
@@ -82,11 +83,12 @@ nav{
   opacity: 0.1;
   border-radius: 5px;
   z-index: 1;
+
+  &:hover{
+    opacity: 0.9;
+  }
 }
 
-.to_top_button:hover{
-  opacity: 0.9;
-}
 
 
 
@@ -132,6 +134,7 @@ nav{
 
 }
 
+
 #personal_picture{
   width: 100px;
   height: 100px;
@@ -143,6 +146,15 @@ nav{
   height: 150px;
 }
 
+
+.picture_container{
+  display: inline-block;
+  padding: 20px;
+}
+
+
+//For image tilting
+
 .tilt_10degree_cc{
   transform-origin: 50% 50%;
   transform: rotate(-10deg);
@@ -150,10 +162,22 @@ nav{
   -webkit-transform: rotate(-10deg); /*Opera, Chrome, and Safari*/
 }
 
-.picture_container{
-  display: inline-block;
-  padding: 20px;
+.tilt_0degree_cc{
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg); /*IE 9*/
+  -webkit-transform: rotate(0deg); /*Opera, Chrome, and Safari*/
 }
+
+.picture_tilter{
+  @extend .tilt_10degree_cc;
+
+  &:hover{
+    @extend .tilt_0degree_cc;
+  }
+}
+
+
 
 //For text wrapping
 .float_image_container_left{
@@ -256,6 +280,13 @@ nav{
   }
 }
 
+.picture_tilter{
+  transition: all 200ms ease-in-out;
+}
+
+.picture_tilter:hover{
+  transition: all 200ms ease-in-out;
+}
 
 
 
