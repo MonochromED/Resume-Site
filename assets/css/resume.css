@@ -166,14 +166,24 @@ nav {
     margin-right: 70px;
     margin-left: 70px; } }
 @media screen and (max-width: 480px) {
-  nav .button {
-    display: block;
-    margin: auto;
-    border-top: 1px solid #efe4d5;
-    height: 50px;
-    font-size: 1.5em; }
-  nav .button_container {
-    width: 100%; } }
+  nav {
+    /*------------Vertical and Horizontal Content Centering---------*/
+    /*Parent container must be set to relative positioning*/ }
+    nav .button {
+      display: block;
+      margin: auto;
+      border-top: 1px solid #efe4d5;
+      height: 50px;
+      font-size: 1.5em; }
+    nav .button_container {
+      width: 100%; }
+    nav .button_center_text {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      position: absolute; } }
 @media screen and (min-width: 1000px) {
   .main_content {
     width: 100%;
