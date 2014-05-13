@@ -1,0 +1,142 @@
+/*CSS Smooth Dropdown dropdown*/
+
+/*-----------Smooth Dropdown Menus------------------*/
+//Instructions
+//Designate a parent 'hover-expand-container'
+//Place a button to trigger the drop dropdown with class 'dropdown-button' within 
+//parent 'hover-expand-container'.
+//Place the dropdown area within parent 'hover-expand-container' with class
+//called 'hover-expand-box'
+//Place elements inside 'hover-expand-box' with class 'dropdown-option' 
+//For wider dropdown option elements, modify with classes.
+
+/*Dropdown and dropdown Transitions*/
+
+/*Designate item as hover box container*/
+.hover-expand-container{
+
+  //Variables (Changable settings)
+  $link_color: white;
+
+  $default_drop_menu_button_height: auto;
+  $default_drop_menu_button_width: auto;
+  $default_drop_menu_button_bg_color: transparent;
+
+  $dropdown_option_bg_color: rgba(lighten(tan, 5), 1); 
+  $dropdown_option_border_width: 1px;
+  $dropdown_option_height: auto;
+  $dropdown_option_border_color: none;
+  $dropdown_option_min_width: 100%;
+  $dropdown_option_text_color: black;
+
+  $hover_expand_box_height: 150px;
+  $hover_expand_box_width: $dropdown_option_min_width;
+
+
+  //hover-expand-container properties
+  position: relative;
+  display: inline-block;
+
+
+  //Width modifiers
+  .double-wide{
+    width: $dropdown_option_min_width * 2;
+  }
+
+  .triple-wide{
+    width: $dropdown_option_min_width * 3;
+  }  
+
+
+  //Nested elements
+  a{
+    color: $link_color; 
+  }
+
+  .dropdown-button{
+    position: relative;
+    height: $default_drop_menu_button_height;
+    width: $default_drop_menu_button_width;
+    background-color: $default_drop_menu_button_bg_color;
+    color: $dropdown_option_text_color;
+    cursor: pointer;
+  }
+
+  .dropdown-option{
+
+    min-width: $dropdown_option_min_width;
+    height: $dropdown_option_height - $dropdown_option_border_width;
+    text-align: center;
+    background-color: $dropdown_option_bg_color;
+    border-top: $dropdown_option_border_width solid $dropdown_option_border_color;
+    position: relative;
+  }
+
+  /*Designate an item as hidden hover expand box*/
+  .hover-expand-box{
+    height: 0;
+    min-width: $hover_expand_box_width;//Should be same size as content for vertical only transition.
+    overflow: hidden;//Required for smooth dropdown effect
+    top: 100%;
+    position: relative;
+    opacity: 0;
+    background-color: transparent;
+  }
+
+  /*Allows for extended size hover-expand-box*/
+  .hover-expand-box-expanded{
+    height: $hover_expand_box_height;
+    opacity: 1;
+  }
+
+
+  /*-------------Interactive Settings-------------*/
+  /*Expand that child hover-expand-box elements when sibling button container is hovered on*/
+  /*Remain expanded when hovered over within hover-expand-box.*/
+  .dropdown-button:hover ~ .hover-expand-box,
+  .hover-expand-box:hover{
+    height: $hover_expand_box_height;
+    min-width: $dropdown_option_min_width;
+    opacity: 1;
+    overflow: auto;
+  }
+
+  /*Can extend the dropdown area if needed by adding in the
+  hover-expand-box-extended class*/
+  .dropdown-button:hover ~ .hover-expand-box-extended,
+  .hover-expand-box-extended:hover{
+    height: 400px;
+  }
+
+
+
+  /*------------Transitions---------------*/
+  .dropdown-button:hover ~ .hover-expand-box,
+  .hover-expand-box:hover{
+    transition: height 1s, opacity 0.5s;
+  }
+
+  .hover-expand-box{
+    transition: height 0.5s, opacity 1s;
+  }
+
+
+
+  /*------*Optional Media Queries*------*/
+  /*If mobile variant, set media query width and flag with
+  the 'expand_if_mobile' class to set all expandables to expanded state.*/
+  @media screen and (max-width: 480px){
+    .hover-expand-box, .dropdown-button:hover ~ .hover-expand-box,
+    .hover-expand-box:hover{
+      opacity: 1;
+      height: auto;
+      overflow: none;
+    }
+  }
+}
+
+
+/*-----------End Smooth Dropdown Menus------------------*/
+
+
+
