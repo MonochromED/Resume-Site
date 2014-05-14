@@ -261,6 +261,12 @@ nav{
       margin-right: 70px;
       margin-left: 70px;
     }
+
+    nav{
+      .button_container{
+        white-space: nowrap;
+      }
+    }
   }
 }
 

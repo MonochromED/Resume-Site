@@ -184,7 +184,9 @@ nav {
 @media screen and (min-width: 480px) {
   body section {
     margin-right: 70px;
-    margin-left: 70px; } }
+    margin-left: 70px; }
+  body nav .button_container {
+    white-space: nowrap; } }
 @media screen and (max-width: 480px) {
   .hide_if_mobile {
     display: none; }
