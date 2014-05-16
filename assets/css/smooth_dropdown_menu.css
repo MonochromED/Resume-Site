@@ -12,10 +12,7 @@
   /*Remain expanded when hovered over within hover-expand-box.*/
   /*Can extend the dropdown area if needed by adding in the
   hover-expand-box-extended class*/
-  /*------------Transitions---------------*/
-  /*------*Optional Media Queries*------*/
-  /*If mobile variant, set media query width and flag with
-  the 'expand_if_mobile' class to set all expandables to expanded state.*/ }
+  /*------------Transitions---------------*/ }
   .hover-expand-container .double-wide {
     width: 200%; }
   .hover-expand-container .triple-wide {
@@ -61,16 +58,21 @@
     transition: height 1s, opacity 0.5s; }
   .hover-expand-container .hover-expand-box {
     transition: height 0.5s, opacity 1s; }
+
+/*------*Optional Media Queries*------*/
+/*If mobile variant, set media query width and flag with
+the 'expand-if-mobile' class to set all expandables to expanded state.*/
+.expand-if-mobile {
+  /*If element is both has classes 'dropdown-button' and 'default_cursor'
+  causes the cursor to return to default*/ }
   @media screen and (max-width: 480px) {
-    .hover-expand-container {
-      /*If element is both has classes 'dropdown-button' and 'default_cursor'
-      causes the cursor to return to default*/ }
-      .hover-expand-container .hover-expand-box, .hover-expand-container .dropdown-button:hover ~ .hover-expand-box,
-      .hover-expand-container .hover-expand-box:hover {
-        opacity: 1;
-        height: auto;
-        overflow: none; }
-      .hover-expand-container .dropdown-button.default_cursor_when_mobile {
-        cursor: default; } }
+    .expand-if-mobile .hover-expand-box, .expand-if-mobile .dropdown-button:hover ~ .hover-expand-box,
+    .expand-if-mobile .hover-expand-box:hover {
+      opacity: 1;
+      height: auto;
+      overflow: none; } }
+  @media screen and (max-width: 480px) {
+    .expand-if-mobile .dropdown-button {
+      cursor: default; } }
 
 /*-----------End Smooth Dropdown Menus------------------*/

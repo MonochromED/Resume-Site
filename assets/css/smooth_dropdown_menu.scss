@@ -122,27 +122,30 @@
   .hover-expand-box{
     transition: height 0.5s, opacity 1s;
   }
+}
 
 
-
-  /*------*Optional Media Queries*------*/
-  /*If mobile variant, set media query width and flag with
-  the 'expand_if_mobile' class to set all expandables to expanded state.*/
-  @media screen and (max-width: 480px){
-    .hover-expand-box, .dropdown-button:hover ~ .hover-expand-box,
-    .hover-expand-box:hover{
+/*------*Optional Media Queries*------*/
+/*If mobile variant, set media query width and flag with
+the 'expand-if-mobile' class to set all expandables to expanded state.*/
+.expand-if-mobile{
+  .hover-expand-box, .dropdown-button:hover ~ .hover-expand-box,
+  .hover-expand-box:hover{
+    @media screen and (max-width: 480px){
       opacity: 1;
       height: auto;
       overflow: none;
     }
-
-    /*If element is both has classes 'dropdown-button' and 'default_cursor'
-    causes the cursor to return to default*/
-    .dropdown-button.default_cursor_when_mobile{
+  }
+  /*If element is both has classes 'dropdown-button' and 'default_cursor'
+  causes the cursor to return to default*/
+  .dropdown-button{
+    @media screen and (max-width: 480px){
       cursor: default;
     }
   }
 }
+
 
 
 /*-----------End Smooth Dropdown Menus------------------*/
