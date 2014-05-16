@@ -191,7 +191,6 @@ nav{
   padding-right: 10px;
   padding-bottom: 40px;
   background-color: white;
-
 }
 
 
@@ -237,6 +236,12 @@ nav{
   }
 }
 
+//For shadow effects
+.effect_float_shadow{
+  -webkit-box-shadow: 0 10px 6px -7px #777;
+  -moz-box-shadow: 0 10px 6px -7px #777;
+  box-shadow: 0 10px 6px -7px #777;
+}
 
 
 //For text wrapping
