@@ -1,0 +1,21 @@
+/*-----Print friendly------*/
+.print_button_container{
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+#request_print_friendly_button{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: tan;
+  display: inline-block;
+  padding: 5px;
+  width: 100px;
+}
+
+.hide_if_print{
+  @media print{
+    display: none;
+  }
+}
