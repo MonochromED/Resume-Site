@@ -62,10 +62,15 @@
   .hover-expand-container .hover-expand-box {
     transition: height 0.5s, opacity 1s; }
   @media screen and (max-width: 480px) {
-    .hover-expand-container .hover-expand-box, .hover-expand-container .dropdown-button:hover ~ .hover-expand-box,
-    .hover-expand-container .hover-expand-box:hover {
-      opacity: 1;
-      height: auto;
-      overflow: none; } }
+    .hover-expand-container {
+      /*If element is both has classes 'dropdown-button' and 'default_cursor'
+      causes the cursor to return to default*/ }
+      .hover-expand-container .hover-expand-box, .hover-expand-container .dropdown-button:hover ~ .hover-expand-box,
+      .hover-expand-container .hover-expand-box:hover {
+        opacity: 1;
+        height: auto;
+        overflow: none; }
+      .hover-expand-container .dropdown-button.default_cursor_when_mobile {
+        cursor: default; } }
 
 /*-----------End Smooth Dropdown Menus------------------*/
