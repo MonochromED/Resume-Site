@@ -71,6 +71,11 @@ the 'expand-if-mobile' class to set all expandables to expanded state.*/
       opacity: 1;
       height: auto;
       overflow: none; } }
+  @media print {
+    .expand-if-mobile .hover-expand-box {
+      opacity: 1;
+      height: auto;
+      overflow: default; } }
   @media screen and (max-width: 480px) {
     .expand-if-mobile .dropdown-button {
       cursor: default; } }

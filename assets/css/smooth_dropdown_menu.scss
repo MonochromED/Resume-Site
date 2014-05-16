@@ -82,7 +82,7 @@
     overflow: hidden;//Required for smooth dropdown effect
     top: 100%;
     position: relative;
-    opacity: 0;
+    opacity: 0;//Issue on webkit browsers printing start opacity despite media print query when 0.
     background-color: transparent;
   }
 
@@ -137,6 +137,14 @@ the 'expand-if-mobile' class to set all expandables to expanded state.*/
       overflow: none;
     }
   }
+
+  .hover-expand-box{
+    @media print{
+      opacity: 1;
+      height: auto;
+      overflow: default;
+    }
+  }
   /*If element is both has classes 'dropdown-button' and 'default_cursor'
   causes the cursor to return to default*/
   .dropdown-button{
@@ -147,8 +155,4 @@ the 'expand-if-mobile' class to set all expandables to expanded state.*/
 }
 
 
-
 /*-----------End Smooth Dropdown Menus------------------*/
-
-
-
