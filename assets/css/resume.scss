@@ -3,7 +3,7 @@
 #resume_page{
   //SCSS Variables
   $default_padding: 5px;
-
+  font-family: calibri,times;
   //Default HTML tags
 
   h1{
@@ -33,9 +33,6 @@
     text-align: center;
   }
 
-  body{
-    font-family: calibri,times;
-  }
 
   section{
     background-color: rgba(tan,0.1);
@@ -111,7 +108,7 @@
       width: 450px;
       margin-left: auto;
       margin-right: auto;
-
+      white-space: nowrap;
     }
     width: 100%;
     background-color: darken(tan, 10);
